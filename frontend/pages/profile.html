@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, viewport-fit=cover"
+    >
+
+    <meta name="description" content="A reader's shelf on Bookly.">
+
+    <title>Profile | Bookly</title>
+
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/feed.css">
+</head>
+
+<body data-page="profile" data-topbar-title="Profile">
+
+<div class="app">
+
+    <main class="shell">
+
+        <div class="container container-wide" id="profile-root"></div>
+
+    </main>
+
+</div>
+
+<script src="../assets/js/api.js"></script>
+<script src="../assets/js/theme.js"></script>
+<script src="../assets/js/app.js"></script>
+<script src="../assets/js/profile.js"></script>
+<script>
+    (() => {
+        const root = document.getElementById("profile-root");
+
+        function syncProfileAvatar() {
+            const source = root?.querySelector(".profile-avatar-wrap .avatar");
+
+            if (!source) {
+                return;
+            }
+
+            document
+                .querySelectorAll('.sidebar a[href="profile.html"] .avatar, .tabbar a[href="profile.html"] .avatar')
+                .forEach((target) => {
+                    target.innerHTML = source.innerHTML;
+                });
+        }
+
+        if (root) {
+            new MutationObserver(syncProfileAvatar).observe(root, {
+                childList: true,
+                subtree: true
+            });
+
+            syncProfileAvatar();
+        }
+    })();
+</script>
+
+</body>
+</html>

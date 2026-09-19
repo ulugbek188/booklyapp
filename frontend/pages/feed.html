@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, viewport-fit=cover"
+    >
+
+    <meta
+        name="description"
+        content="Bookly — a quiet social space for the books that stay with you."
+    >
+
+    <title>Bookly</title>
+
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/feed.css?v=20260918">
+    <style>
+        .post-action.is-liked svg,
+        .comment-like.is-liked svg {
+            color: var(--like);
+            fill: var(--like);
+        }
+    </style>
+</head>
+
+<body data-page="feed">
+
+<div class="app">
+
+    <main class="shell">
+
+        <div class="feed-layout">
+
+            <div class="feed-column">
+
+                <section
+                    id="feed"
+                    aria-label="Book feed"
+                ></section>
+
+            </div>
+
+
+            <aside
+                class="feed-aside"
+                aria-label="Suggestions"
+            >
+
+                <div class="feed-aside-sticky">
+
+                    <div id="aside-me"></div>
+
+
+                    <div>
+
+                        <div class="aside-block-head">
+
+                            <h3>
+                                Readers you follow
+                            </h3>
+
+                            <button
+                                class="btn btn-ghost btn-sm"
+                                type="button"
+                                data-action="open-search"
+                            >
+                                Find more
+                            </button>
+
+                        </div>
+
+
+                        <div
+                            class="aside-list"
+                            id="aside-following"
+                        >
+                            <p class="aside-empty">
+                                Loading your readers...
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div>
+
+                        <div class="aside-block-head">
+
+                            <h3>
+                                Share what you are reading
+                            </h3>
+
+                        </div>
+
+                        <a
+                            class="btn btn-primary btn-block"
+                            href="create_post.html"
+                        >
+                            Share a book
+                        </a>
+
+                    </div>
+
+
+                    <footer class="aside-footer">
+
+                        <div class="aside-footer-links">
+
+                            <span>Feed</span>
+                            <span>Profile</span>
+                            <span>Share</span>
+                            <span>Search</span>
+
+                        </div>
+
+                        <p>
+                            © Bookly — a home for the books that stay with you.
+                        </p>
+
+                    </footer>
+
+                </div>
+
+            </aside>
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<script src="../assets/js/api.js?v=20260918"></script>
+<script src="../assets/js/theme.js"></script>
+<script src="../assets/js/app.js"></script>
+<script src="../assets/js/feed.js"></script>
+
+</body>
+
+</html>

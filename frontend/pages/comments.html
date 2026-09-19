@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, viewport-fit=cover"
+    >
+
+    <meta name="description" content="Read and discuss a book post on Bookly.">
+
+    <title>Post | Bookly</title>
+
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/feed.css">
+    <style>
+        .post-action.is-liked svg,
+        .comment-like.is-liked svg {
+            color: var(--like);
+            fill: var(--like);
+        }
+    </style>
+</head>
+
+<body
+    data-page="comments"
+    data-topbar-title="Post"
+    data-topbar-back="feed.html"
+>
+
+<div class="app">
+
+    <main class="shell">
+
+        <div class="container container-wide" id="detail-root"></div>
+
+    </main>
+
+</div>
+
+<script src="../assets/js/api.js"></script>
+<script src="../assets/js/theme.js"></script>
+<script src="../assets/js/app.js"></script>
+<script src="../assets/js/comments.js"></script>
+
+</body>
+</html>

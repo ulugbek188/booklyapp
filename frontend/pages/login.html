@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, viewport-fit=cover"
+    >
+
+    <meta name="description" content="Log in to Bookly.">
+
+    <title>Log in | Bookly</title>
+
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/auth.css">
+</head>
+
+<body data-page="login" data-shell="off">
+
+<main class="auth">
+
+    <section class="auth-visual" aria-hidden="true">
+
+        <div class="auth-quote">
+
+            <div class="auth-spines">
+                <span class="auth-spine"></span>
+                <span class="auth-spine"></span>
+                <span class="auth-spine"></span>
+                <span class="auth-spine"></span>
+                <span class="auth-spine"></span>
+                <span class="auth-spine"></span>
+            </div>
+
+            <span class="auth-brand-lockup"><img src="../assets/images/bookly-icon.png" alt="Bookly"><span class="brand">Bookly</span></span>
+
+            <p>
+                Keep a shelf of the books that stayed with you, and read
+                what the people you trust are reading.
+            </p>
+
+            <p class="auth-quote-meta">Books · Readers · Conversations</p>
+
+        </div>
+
+    </section>
+
+    <div class="auth-main">
+
+        <div class="auth-topbar">
+            <button
+                class="icon-btn"
+                type="button"
+                data-theme-toggle
+                aria-label="Switch theme"
+            >
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M20 14.2A8.2 8.2 0 0 1 9.8 4a8.4 8.4 0 1 0 10.2 10.2z"/>
+                </svg>
+            </button>
+        </div>
+
+        <section class="auth-card">
+
+            <div class="auth-brand">
+                <h1 class="brand auth-brand-lockup"><img src="../assets/images/bookly-icon.png" alt=""><span>Bookly</span></h1>
+                <p>A home for the books that stay with you.</p>
+            </div>
+
+            <form class="auth-form" id="login-form" novalidate>
+
+                <div class="field">
+                    <label for="username">Username</label>
+
+                    <input
+                        class="input"
+                        id="username"
+                        type="text"
+                        minlength="3"
+                        maxlength="50"
+                        autocomplete="username"
+                        placeholder="Your username"
+                        required
+                    >
+                </div>
+
+                <div class="field">
+                    <label for="password">Password</label>
+
+                    <div class="password-field">
+                        <input
+                            class="input"
+                            id="password"
+                            type="password"
+                            minlength="8"
+                            maxlength="50"
+                            autocomplete="current-password"
+                            placeholder="Your password"
+                            required
+                        >
+
+                        <button
+                            class="password-toggle"
+                            type="button"
+                            data-password-toggle="password"
+                        >
+                            Show
+                        </button>
+                    </div>
+                </div>
+
+                <button class="btn btn-primary btn-lg btn-block auth-submit" type="submit">
+                    Log in
+                </button>
+
+                <p class="form-message" id="login-message" role="status" aria-live="polite"></p>
+
+            </form>
+
+            <div class="auth-divider"><span>or</span></div>
+
+            <p class="auth-note">
+                Bookly keeps only what you choose to share: your username,
+                your bio and the books you post.
+            </p>
+
+        </section>
+
+        <section class="auth-switch">
+            New to Bookly?
+            <a href="register.html">Create an account</a>
+        </section>
+
+        <p class="auth-foot">Books · Readers · Conversations</p>
+
+    </div>
+
+</main>
+
+<script src="../assets/js/api.js"></script>
+<script src="../assets/js/theme.js"></script>
+<script src="../assets/js/auth.js"></script>
+
+</body>
+</html>

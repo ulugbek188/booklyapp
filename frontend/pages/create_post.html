@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, viewport-fit=cover"
+    >
+
+    <meta name="description" content="Share a book with your readers on Bookly.">
+
+    <title>Share a book | Bookly</title>
+
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/feed.css">
+</head>
+
+<body
+    data-page="create"
+    data-topbar-title="Share a book"
+    data-topbar-back="feed.html"
+>
+
+<div class="app">
+
+    <main class="shell">
+
+        <div class="container container-wide">
+
+            <section class="composer">
+
+                <header class="composer-head">
+                    <a class="btn btn-ghost" href="feed.html">Cancel</a>
+
+                    <h1 class="title-md">Share a book</h1>
+
+                    <button
+                        class="btn btn-ghost"
+                        type="submit"
+                        form="post-form"
+                    >
+                        Share
+                    </button>
+                </header>
+
+                <form class="composer-grid" id="post-form" novalidate>
+
+                    <div
+                        class="composer-drop"
+                        id="cover-drop"
+                        role="button"
+                        tabindex="0"
+                        aria-label="Select a book cover"
+                    >
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <rect x="3" y="4" width="18" height="16" rx="2.5"/>
+                            <circle cx="8.5" cy="9.5" r="1.8"/>
+                            <path d="m4 17 5-4.5 4 3.5 3-2.5 4 3.5"/>
+                        </svg>
+
+                        <h3>Drag a book cover here</h3>
+
+                        <p>JPG, PNG, WEBP or GIF — optional</p>
+
+                        <span class="btn btn-primary btn-sm">Select from device</span>
+                    </div>
+
+                    <input
+                        id="cover"
+                        type="file"
+                        accept=".jpg,.jpeg,.png,.webp,.gif"
+                        hidden
+                    >
+
+                    <div class="composer-form">
+
+                        <div class="composer-user" id="composer-user"></div>
+
+                        <div class="field">
+                            <label for="title">Book title</label>
+
+                            <input
+                                class="input"
+                                id="title"
+                                type="text"
+                                maxlength="255"
+                                placeholder="The title on the spine"
+                                autocomplete="off"
+                                required
+                            >
+
+                            <span class="field-hint composer-counter" id="title-counter"></span>
+                        </div>
+
+                        <div class="field">
+                            <label for="gist">Your short take</label>
+
+                            <input
+                                class="input"
+                                id="gist"
+                                type="text"
+                                minlength="5"
+                                placeholder="One line on what made it memorable"
+                                autocomplete="off"
+                                required
+                            >
+
+                            <span class="field-hint composer-counter" id="gist-counter"></span>
+                        </div>
+
+                        <div class="field">
+                            <label for="description">Description</label>
+
+                            <textarea
+                                class="textarea"
+                                id="description"
+                                placeholder="What stayed with you? Who should read it?"
+                                required
+                            ></textarea>
+
+                            <span class="field-hint composer-counter" id="description-counter"></span>
+                        </div>
+
+                        <div class="field">
+                            <label for="permission">Who can comment</label>
+
+                            <select class="select" id="permission">
+                                <option value="anyone">Anyone</option>
+                                <option value="followers">Followers only</option>
+                                <option value="nobody">Nobody</option>
+                            </select>
+                        </div>
+
+                        <p class="form-message" id="post-message"></p>
+
+                        <div class="composer-footer">
+                            <a class="btn btn-outline" href="feed.html">Cancel</a>
+
+                            <button class="btn btn-primary" type="submit">Share</button>
+                        </div>
+
+                    </div>
+
+                </form>
+
+            </section>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="../assets/js/api.js"></script>
+<script src="../assets/js/theme.js"></script>
+<script src="../assets/js/app.js"></script>
+<script src="../assets/js/create-post.js"></script>
+
+</body>
+</html>
